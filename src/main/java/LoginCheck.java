@@ -47,6 +47,7 @@ public class LoginCheck extends HttpServlet {
     		          		     
     	               if(rs.next()) {
     			                   System.out.print("--PASSOU O Username E Senha ");
+    			                   /*
     			                   pst= con.prepareStatement("SELECT id_client,datavenc FROM account");
     			                   String id =rs.getString("id_client"); 
     			                     
@@ -85,17 +86,18 @@ public class LoginCheck extends HttpServlet {
     									    request.getSession().setAttribute("lastname", rs.getString("lastname"));
     									    request.getSession().setAttribute("home", rs.getString("home"));
     									    request.getSession().setAttribute("datavenc", rs.getString("datavenc"));
+    									    */
     			    		                RequestDispatcher rd = request.getRequestDispatcher("logado.jsp");
     			    		          	    rd.forward(request, response); 
     			                          }
-    			                          else{  
+    			                      /*    else{  
     			                        	    request.getSession().setAttribute("dataSistema", dataSistema); 
          			                            request.getSession().setAttribute("id", id);
     			                        	  RequestDispatcher rd = request.getRequestDispatcher("submition.jsp");
       			    		          	      rd.forward(request, response); 
     			                            	System.out.print("----VENCIDO SUBMITION !!!!------");
     			                                }
-    	                          }
+    	                          } */
     	                          else {
 	    	                            System.out.print("----NAO NAO ENTROU NO DATABASE------");
 	                                     RequestDispatcher rd = request.getRequestDispatcher("errorpass.jsp");
